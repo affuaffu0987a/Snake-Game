@@ -1,29 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Belanosima', sans-serif;
 }
-
 .body{
    /* background: url(img/snakebg2.png);
    background-repeat: no-repeat;
    background-size: 100vw,100vh; */
    background-image: url(img/snakebg3.png);
-   width: 100%;
+   /* width: 100%; */
    height: 100vh;
    background-repeat: no-repeat;
    /* background-position: center; */
-   background-size: 120vw,100vh;
+   background-size: 130vw,100vh;
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: row;
+}
+#discription{
+    margin-left: -85px;
+    margin-right: 4rem;
+}
+#discription h2{
+    margin-bottom: 2rem;
 }
 
 .bord{
     border: 3px solid rgb(243, 94, 94);
     box-shadow: -13px 18px 20px -6px rgb(0.5, 0.5, 0.05);
     width: 90vmin;
-    height: 92vmin;
+    height:92vmin;
     /* filter: blur(4px); */
     background: linear-gradient(rgb(252, 249, 249),rgb(129, 202, 56));
     display: grid;
@@ -32,11 +41,59 @@
 }
 
 .head{
-    background-color: red;
+    background: linear-gradient(red,yellow);
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid black;
+    box-shadow: -13px 18px 20px -6px rgb(0.5, 0.5, 0.05);
 }
 .snakebody{
-    background-color: lawngreen;
+    background: linear-gradient(white,yellow);
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: -13px 18px 20px -6px rgb(0.5, 0.5, 0.05);
 }
 .food{
-    background-color: chocolate;
+    background-color: rgb(173, 103, 122);
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: -13px 18px 20px -6px rgb(0.5, 0.5, 0.05);
+}
+#Score{
+    margin-top: 1rem;
+}
+#highScore{
+    margin-top: 2px;
+}
+
+@media(max-width:420px){
+    .bord{
+        width: 49vmin;
+        height:50vmin;
+    
+    }
+    .body{
+        width: 100%;
+        height: 100vh;
+        background-size: 100vw,200vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #discription{
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: -300px;
+        color: white;
+        margin-bottom: 6rem;
+    }
+    #discription h2{
+        margin-bottom: 1rem;
+    }
+    #discription p{
+        margin-bottom: 1rem;
+    }
 }
